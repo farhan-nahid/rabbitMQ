@@ -17,7 +17,7 @@ async function consume() {
         const messageContent = msg.content.toString();
         console.log(`[x] Received ${msg.fields.routingKey}: '${messageContent}'`);
         channel.ack(msg); // Acknowledge the message
-        console.log(`==============${Date.now()}==================`)
+        console.log(`==============${Date.now()}==================`);
       }
     });
   } catch (error) {
